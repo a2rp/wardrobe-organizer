@@ -1,0 +1,95 @@
+.wardrobeOrganizer {
+    .intro { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 17px 0 22px; }
+    .label { color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: .16em; }
+    .intro h1 { margin-top: 10px; font-size: clamp(42px, 5vw, 62px); font-weight: 760; line-height: .97; letter-spacing: -.06em; }
+    .intro h1 span { color: #77709f; font-family: Georgia, serif; font-weight: 500; font-style: italic; }
+    .description { margin-top: 13px; color: var(--muted); font-size: 13px; }
+    .valueCard { display: grid; min-width: 190px; gap: 4px; padding: 16px; border: 1px solid #dedbed; border-radius: 14px; background: #e9e7f2; }
+    .valueCard svg { width: 22px; height: 22px; margin-bottom: 4px; color: var(--accent); }
+    .valueCard span { color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .14em; }
+    .valueCard strong { font-family: Georgia, serif; font-size: 21px; }
+    .valueCard small { color: var(--muted); font-size: 10px; }
+    .mainLayout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; align-items: start; gap: 14px; }
+    .closetPanel, .outfitPanel { border: 1px solid var(--line); border-radius: 16px; background: var(--card); }
+    .closetPanel { padding: 19px; }
+    .closetHeading { display: flex; align-items: end; justify-content: space-between; gap: 15px; }
+    .closetHeading h2 { font-family: Georgia, serif; font-size: 24px; font-weight: 500; }
+    .closetHeading p { color: var(--muted); font-size: 10px; }
+    .searchField { display: grid; grid-template-columns: auto 145px; align-items: center; gap: 6px; color: var(--muted); font-size: 9px; }
+    .searchField input { min-height: 32px; padding: 0 8px; border: 1px solid var(--line); border-radius: 7px; outline-color: var(--accent); background: #f8f7fa; font-size: 10px; }
+    .filterRow { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 14px 0; }
+    .typeTabs { display: flex; flex-wrap: wrap; gap: 4px; }
+    .typeTabs button { min-height: 28px; padding: 0 9px; border: 1px solid transparent; border-radius: 7px; color: var(--muted); background: transparent; font-size: 9px; }
+    .typeTabs .activeType { border-color: #dedbed; color: #4b456e; background: #f0eef7; font-weight: 750; }
+    .seasonSelect { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 9px; white-space: nowrap; }
+    .seasonSelect select { min-height: 31px; padding: 0 24px 0 7px; border: 1px solid var(--line); border-radius: 7px; background: white; font-size: 9px; }
+    .clothingGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .clothingCard { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .clothingArt { position: relative; display: grid; height: 95px; place-items: center; overflow: hidden; color: #fff; }
+    .clothingArt::before { position: absolute; inset: 0; background: linear-gradient(140deg, #fff6, transparent 55%, #25283c18); content: ""; }
+    .clothingArt svg { position: relative; width: 36px; height: 36px; filter: drop-shadow(0 3px 2px #26283c30); }
+    .clothingArt span { position: absolute; right: 7px; bottom: 6px; padding: 3px 6px; border-radius: 99px; color: #313449; background: #ffffffd9; font-size: 8px; }
+    .clothingInfo { padding: 9px; }
+    .itemTop { display: flex; align-items: center; gap: 5px; color: var(--muted); font-size: 8px; }
+    .swatch { width: 10px; height: 10px; border: 1px solid #31344922; border-radius: 50%; }
+    .deleteButton { display: grid; width: 24px; height: 24px; place-items: center; margin-left: auto; border: 0; border-radius: 6px; color: var(--muted); background: transparent; }
+    .deleteButton:hover { box-shadow: 0 2px 8px #3530491a; color: var(--accent); }
+    .deleteButton svg { width: 12px; }
+    .clothingInfo h3 { overflow: hidden; margin-top: 2px; font-size: 11px; font-weight: 720; text-overflow: ellipsis; white-space: nowrap; }
+    .clothingInfo p { margin-top: 2px; color: var(--muted); font-size: 8px; }
+    .clothingInfo p span { padding: 0 3px; }
+    .outfitButton, .addedButton { width: 100%; min-height: 28px; margin-top: 8px; border: 1px solid #dcd9eb; border-radius: 7px; color: #5f588c; background: #f7f6fb; font-size: 8px; font-weight: 750; }
+    .addedButton { display: flex; align-items: center; justify-content: center; gap: 4px; border-color: #bbcbbd; color: #457452; background: #eff5ed; }
+    .addedButton svg { width: 11px; }
+    .outfitButton:hover, .addedButton:hover { box-shadow: 0 3px 8px #504a7017; }
+    .emptyState { grid-column: 1 / -1; padding: 25px; color: var(--muted); font-size: 11px; text-align: center; }
+    .addForm { display: grid; grid-template-columns: 1.1fr 1.5fr 1fr 1fr .65fr .7fr auto; align-items: end; gap: 8px; margin-top: 13px; padding: 13px; border-radius: 11px; background: #f5f4f9; }
+    .addForm h3 { grid-column: 1 / -1; font-size: 11px; }
+    .addForm label { display: grid; gap: 4px; color: var(--muted); font-size: 8px; font-weight: 700; }
+    .addForm input, .addForm select { width: 100%; min-width: 0; min-height: 32px; padding: 0 6px; border: 1px solid var(--line); border-radius: 6px; outline-color: var(--accent); background: white; font-size: 9px; }
+    .addForm input[type="color"] { padding: 3px; }
+    .addButton { display: flex; min-height: 32px; align-items: center; gap: 4px; padding: 0 8px; border: 0; border-radius: 7px; color: #fff; background: var(--accent); font-size: 9px; font-weight: 700; }
+    .addButton svg { width: 12px; }
+    .outfitPanel { position: sticky; top: 84px; padding: 17px; background: #f2f0f8; }
+    .outfitHeader { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 2px 9px; }
+    .outfitMark { grid-row: span 2; display: grid; width: 38px; height: 38px; place-items: center; border-radius: 12px; color: #fff; background: var(--accent); }
+    .outfitMark svg { width: 19px; }
+    .outfitHeader > span { color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .13em; }
+    .outfitHeader h2 { font-family: Georgia, serif; font-size: 17px; font-weight: 500; }
+    .outfitHeader > p { grid-column: 1 / -1; margin-top: 8px; color: var(--muted); font-size: 10px; }
+    .outfitItems { display: grid; gap: 7px; margin-top: 15px; }
+    .outfitItem { display: flex; align-items: center; gap: 8px; padding: 8px; border: 1px solid #e0ddeb; border-radius: 9px; background: #fff; }
+    .outfitItem > span { width: 30px; height: 30px; border-radius: 7px; }
+    .outfitItem div { display: grid; min-width: 0; }
+    .outfitItem strong { overflow: hidden; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+    .outfitItem small { color: var(--muted); font-size: 8px; }
+    .outfitItem button { width: 24px; height: 24px; margin-left: auto; border: 0; border-radius: 6px; color: var(--muted); background: transparent; font-size: 18px; }
+    .outfitItem button:hover { box-shadow: 0 2px 7px #35304920; }
+    .outfitEmpty { padding: 14px 7px; border: 1px dashed #d2cfe0; border-radius: 9px; color: var(--muted); font-size: 10px; }
+    .wearButton { display: flex; width: 100%; min-height: 37px; align-items: center; justify-content: center; gap: 7px; margin-top: 14px; border: 0; border-radius: 8px; color: #fff; background: #514a7f; font-size: 10px; font-weight: 750; }
+    .wearButton svg { width: 14px; }
+    .wearButton:disabled { opacity: .45; }
+    .wearButton:not(:disabled):hover { box-shadow: 0 4px 10px #514a7f30; }
+    .outfitNote { margin-top: 9px; color: var(--muted); font-size: 9px; }
+    .storageNote { margin-top: 11px; color: var(--muted); font-size: 9px; text-align: right; }
+    @media (max-width: 1050px) { .mainLayout { grid-template-columns: 1fr; } .outfitPanel { position: static; } }
+    @media (max-width: 650px) {
+        .intro { align-items: flex-start; flex-direction: column; }
+        .valueCard { width: 100%; grid-template-columns: 30px 1fr; align-items: center; }
+        .valueCard svg { grid-row: span 2; margin: 0; }
+        .valueCard span, .valueCard strong, .valueCard small { grid-column: 2; }
+        .closetPanel { padding: 13px; }
+        .closetHeading { align-items: stretch; flex-direction: column; }
+        .searchField { grid-template-columns: auto 1fr; }
+        .filterRow { align-items: flex-start; flex-direction: column; }
+        .typeTabs { max-height: 65px; overflow: auto; }
+        .seasonSelect { width: 100%; justify-content: space-between; }
+        .seasonSelect select { flex: 1; }
+        .clothingGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .clothingArt { height: 85px; }
+        .addForm { grid-template-columns: 1fr 1fr; }
+        .addForm h3, .addForm label:first-of-type { grid-column: 1 / -1; }
+        .addButton { justify-content: center; }
+        .storageNote { text-align: left; }
+    }
+}
